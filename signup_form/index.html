@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <form id ="myForm" class="container bg-secondary text-light">
+        <div class="text-center font-weight-bold display-4">
+            Registration Form
+        </div>
+        <input type="text" id="tname" class="m-2 p2 free" placeholder="Enter your name" onchange="detail(this)">
+        <br/>
+        
+        <input type="email" id="temail" class="m-2 p2 free" placeholder="Enter your email" onchange="detail(this)">
+        <br/>
+        <input type="number" id="tnum" class="m-2 p2 free" placeholder="Enter your number" maxlength="10" onchange="detail(this)"> 
+        <br/>
+        <input type="date" id="tdate" class="m-2 p2 free" placeholder="Enter your date" onchange="detail(this)">
+        <br/>
+        <input type="password" id="tpass" class="m-2 p2 free" placeholder="Enter password" onchange="detail(this)">
+        <br/>
+        <input type="password" id="tcpass" class="m-2 p2 free" placeholder="Confirm password" onchange="detail(this)">
+        <br/>
+        <textarea id="tarea" class="m-2 p2 free" onkeyup="countachr(this,sh)" maxlength="20"></textarea>
+        <label id ="sh"></label>/20
+        <br/>
+        <input type="checkbox" id="check" class="m-2 p2 free" onchange="disable()" >I Agree
+        <br/>
+        <button type="button" id="submit" class="m-2 p2" onclick="showdata()">Submit</button>
+        <a href="next.html" target="blank"><button type="button" id="next" class="m-2 p2" onclick="loadinggif()">Next</button></a>
+        <p id ="show">
+
+        </p>
+        <p id ="show1">
+
+        </p>
+    </form>
+    
+    <div id="loading" class="hide" ><img src="loading.gif"></div>
+</body>
+
+<script src="js/script.js"></script>
+</html>
