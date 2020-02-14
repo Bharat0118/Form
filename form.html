@@ -6,33 +6,43 @@
         Html CRUD
     </title>
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
     <table>
         <tr>
             <td>
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <form onsubmit="event.preventDefault();onFormSubmit(); show()" autocomplete="off">
                     <div>
                         <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
                         <input type="text" name="fullName" id="fullName">
                     </div>
                     <div>
-                        <label>EMP Code</label>
+                        <label>EMP Code*</label>
                         <input type="text" name="empCode" id="empCode">
                     </div>
                     <div>
-                        <label>Salary</label>
+                        <label>Salary*</label>
                         <input type="text" name="salary" id="salary">
                     </div>
                     <div>
-                        <label>City</label>
+                        <label>City*</label>
                         <input type="text" name="city" id="city">
                     </div>
-                    <div  class="form-action-buttons">
+                   
+                    <label for="education">Education</label>                   
+                    <div id="newElementId"></div>
+                 
+
+                    <div id="dynamicCheck" class="form-action">
+                        <input type="button" class="btn btn-primary" value="Add Edu" onclick="createNewElement();"/>
+                     </div>
+                     
+                     <div  class="form-action-buttons">
                         <input type="submit" value="Submit">
                     </div>
-                </form>
+                    </form>
             </td>
             <td>
                 <table class="list" id="employeeList">
