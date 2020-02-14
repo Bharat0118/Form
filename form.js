@@ -1,4 +1,5 @@
 var selectedRow = null
+var formData={};
 
 function onFormSubmit() {
     if (validate()) {
@@ -32,7 +33,7 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.city;
     cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+    cell4.innerHTML = `<a onClick="onEdit(this)">Update</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
@@ -42,6 +43,9 @@ function resetForm() {
     document.getElementById("salary").value = "";
     document.getElementById("city").value = "";
     selectedRow = null;
+}
+function show(){
+    localStorage.setItem("info",JSON.stringify(formData));
 }
 
 function onEdit(td) {
@@ -76,4 +80,11 @@ function validate() {
             document.getElementById("fullNameValidationError").classList.add("hide");
     }
     return isValid;
+    
+
+}
+function createNewElement() {
+	var txtNewInputBox = document.createElement('div');
+	txtNewInputBox.innerHTML = "<input type='text' id='newInputBox'>";
+	document.getElementById("newElementId").appendChild(txtNewInputBox);
 }
