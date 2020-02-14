@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var s=  localStorage.getItem("showdata");;
+         var obj = JSON.parse(s);
+         console.log(obj[0]);
+         console.log(obj.length);
+         
+        for(let i=0;i<obj.length;i++)
+        {
+            if(obj[i].tpass=="")
+            var as= JSON.stringify(obj[i])
+            var para = document.createElement("P");
+            para.innerText =  as;
+            document.body.appendChild(para);
+           
+        }
+    </script>
+</body>
+</html>
