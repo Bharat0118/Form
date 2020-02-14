@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p id ="local">hellow</p>
+<table>
+<tr id="tab">
+
+</tr>
+<tr id="tab1">
+
+</tr>
+
+</table>
+<script>
+
+
+
+document.getElementById("local").innerHTML = localStorage.getItem("show");                         
+
+var obj1=JSON.parse(localStorage.getItem("show"));
+var htmlitem="";
+var htmltd="";
+for(let i in obj1)
+{
+    htmlitem += "<th>" + i+"</th>";
+    htmltd += "<td>" + obj1[i]+"</td>";
+}
+
+document.getElementById("tab").innerHTML=htmlitem;
+document.getElementById("tab1").innerHTML=htmltd;
+
+
+
+
+
+</script>
+</body>
+</html>
