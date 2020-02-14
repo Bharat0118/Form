@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+      </head>
+    <body>
+        <div class="container mt-4">
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4 center" >
+                <form name="myForm" method="post" class="mt-4" id="frm1">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" class="form-control" name="fname" onblur="validateForm(this , 'para')" id="f">
+              <p id="para"></p>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" class="form-control" name="Lname" onblur="validateForm(this,'para2')" id="l">
+            <p id="para2"></p>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" name="pass" id="password" onblur="check()">
+              <p id="para3"></p>
+            </div>
+            <div class="form-group">
+              <label> Confirm Password</label>
+              <input type="password" class="form-control" name="cpass" onblur="cpassword1()" id="cpass">
+              <p id="para4"></p>
+            </div>
+            <div class="form-group">
+              <label> About Me</label>
+              <textarea placeholder="hiii" id="text" onkeyup="max(this,'err')" maxlength="150"></textarea>
+              <p id="err"></p>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name ="myCheck" onblur="checked()">
+                <label class="form-check-label" for="exampleCheck1" >check it</label>
+              </div>
+              </div>
+              </form>
+          </div>
+        </div>
+        <button value ="submit" onclick="next();data1()" class="btn btn-success ppt-4 mb-4">Next</button>
+        <button value ="" onclick ="clear()" class="btn btn-success ppt-4 mb-4">clear</button>
+        </div>
+
+
+        <div class="conatiner">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 center">
+            <form name="myForm" onsubmit="return loader()" method="post" class="mt-4" id="frm2">
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" class="form-control" name=address onblur="validateForm(this , 'para5')" id="address">
+          <p id="para5"></p>
+        </div>
+        <div class="form-group">
+          <label>Phone NUmber</label>
+          <input type="number" class="form-control" name="number" onblur="validateForm(this,'para6')" id="number">
+        <p id="para6"></p>
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" class="form-control" name="number" id="dat" >  
+        <p></p>
+        </div>
+        <div class="form-group">
+          <label>Age</label>
+          <input  class="form-control" onclick="age()" >  
+        </div>
+        <button type="submit" value ="submit" onclick="data2();loader()" id="btn1" class="btn btn-success ppt-4 mb-4">Submit</button>
+        <img src="loader.gif" id="load">
+        <p id="result"></p>
+      </form>
+     </div>
+     </div>
+</div>
+<div>
+
+</div>
+    <script src="form.js" type="text/javascript">
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
