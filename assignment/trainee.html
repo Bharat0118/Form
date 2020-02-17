@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Add Trainee</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link  href="css/style.css" rel="stylesheet"> 
+    </head>
+    <body>
+            <h1 class="text-center text-primary">Trainee Registration form</h1>
+            <div id="maindiv">
+            <form class="form_b wrapper shadow" id="traineeInfo"  method="post">
+                <label>First Name:</label>
+                <input class="form-control" type="text" id="firstName" required>
+                <label  id="fnameError"></label>
+                <label>Last Name:</label>
+                <input type="text" class="form-control" id="lastName" required>
+                <label>User Name:</label>
+                <input type="text" class="form-control" id="uniqueUname" required>
+                <label  id="unameError"></label>
+                <label>Password:</label>
+                <input type="password" class="form-control" id="password" required>
+                <label  id="passError"></label>
+                <label>Email:</label>
+                <input type="email" class="form-control" id="email" required>
+                <label  id="emailError"></label>
+                <label>Phone Number:</label>
+                <input type="number" class="form-control" id="phNumber" required>
+                <label  id="phnumError"></label>
+                <label>Date Of Birth</label>
+                <input type="date" class="form-control" id="dob" required>
+                <label id="dobError"></label>
+                <!-- onclick="myFunction(this.value)
+                <div><label class="mr-3">Gender</label><input type="radio" value="Male" class="p-3 mr-2"><label>Male</label> 
+                <input type="radio" value="Female" class="p-3 mr-2 ml-3"><label>Female</label>
+                </div> -->
+
+                <label>Status</label>
+                <select id="mySelect" required>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
+
+                <p id="catch"></p>
+                <button type="button" class="btn btn-primary d-block text-center " id="next" onclick="validate()">Next</button>
+                </form>
+                </div>
+                </div>
+                
+                <script src="js/trainee.js">
+                </script>     
+    </body>
+</html>
